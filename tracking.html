@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tracking - BookStore</title>
+
+    <!-- MEMANGGIL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="cekLogin()">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            BookStore
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <h1>Informasi Pengiriman</h1>
+
+        <p class="subtitle">
+            Lacak status pengiriman pesanan buku Anda.
+        </p>
+
+
+        <!-- FORM PENCARIAN DO -->
+        <section class="card">
+
+            <h2>Cari Pengiriman</h2>
+
+            <form onsubmit="event.preventDefault(); cariPengiriman();">
+
+                <label>Nomor Delivery Order</label>
+
+                <input
+                    type="text"
+                    id="nomorDO"
+                    placeholder="Contoh: DO001"
+                    required
+                >
+
+                <button type="submit">
+                    Cari
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- HASIL TRACKING -->
+        <section id="hasilTracking">
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        BookStore &copy; 2026
+
+    </footer>
+
+
+    <!-- MEMANGGIL JAVASCRIPT -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

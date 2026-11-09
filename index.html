@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - BookStore</title>
+
+    <!-- MEMANGGIL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BAGIAN LOGIN -->
+    <main class="login-wrapper">
+
+        <section class="login-box">
+
+            <h1>BookStore</h1>
+
+            <p>Sistem Pemesanan Buku Online</p>
+
+            <!-- FORM LOGIN -->
+            <form onsubmit="prosesLogin(event)">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Masukkan email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <!-- LINK LUPA PASSWORD DAN DAFTAR -->
+            <div class="login-links">
+
+                <a href="#"
+                   onclick="bukaModal('modalLupa'); return false;">
+                    Lupa Password?
+                </a>
+
+                <a href="#"
+                   onclick="bukaModal('modalDaftar'); return false;">
+                    Daftar
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL LUPA PASSWORD -->
+    <div class="modal" id="modalLupa">
+
+        <div class="modal-content">
+
+            <h2>Lupa Password</h2>
+
+            <form onsubmit="event.preventDefault(); alert('Permintaan reset password berhasil disimulasikan.'); tutupModal('modalLupa');">
+
+                <label>Masukkan Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Email Anda"
+                    required
+                >
+
+                <button type="submit">
+                    Kirim
+                </button>
+
+                <br><br>
+
+                <button
+                    type="button"
+                    class="btn-danger"
+                    onclick="tutupModal('modalLupa')"
+                >
+                    Tutup
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL DAFTAR -->
+    <div class="modal" id="modalDaftar">
+
+        <div class="modal-content">
+
+            <h2>Daftar Akun</h2>
+
+            <form onsubmit="event.preventDefault(); alert('Pendaftaran berhasil disimulasikan. Gunakan akun demo untuk login.'); tutupModal('modalDaftar');">
+
+                <label>Nama Lengkap</label>
+
+                <input
+                    type="text"
+                    placeholder="Nama lengkap"
+                    required
+                >
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Email aktif"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    placeholder="Buat password"
+                    required
+                >
+
+                <button type="submit">
+                    Daftar
+                </button>
+
+                <br><br>
+
+                <button
+                    type="button"
+                    class="btn-danger"
+                    onclick="tutupModal('modalDaftar')"
+                >
+                    Tutup
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MEMANGGIL JAVASCRIPT -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

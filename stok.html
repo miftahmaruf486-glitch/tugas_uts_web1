@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stok Buku - BookStore</title>
+
+    <!-- MEMANGGIL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="cekLogin()">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            BookStore
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog</a>
+            <a href="chackout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <h1>Informasi Stok/Katalog Buku</h1>
+
+        <p class="subtitle">
+            Daftar buku yang tersedia di toko BookStore.
+        </p>
+
+
+        <!-- FORM TAMBAH BUKU -->
+        <section class="card">
+
+            <h2>Tambah Buku Baru</h2>
+
+            <form onsubmit="tambahStok(event)">
+
+                <label>Judul Buku</label>
+
+                <input
+                    type="text"
+                    id="judul"
+                    placeholder="Masukkan judul buku"
+                    required
+                >
+
+
+                <label>Penulis</label>
+
+                <input
+                    type="text"
+                    id="penulis"
+                    placeholder="Masukkan nama penulis"
+                    required
+                >
+
+
+                <label>Kategori</label>
+
+                <select id="kategori" required>
+
+                    <option value="">Pilih Kategori</option>
+
+                    <option value="Novel">Novel</option>
+
+                    <option value="Fiksi">Fiksi</option>
+
+                    <option value="Non Fiksi">Non Fiksi</option>
+
+                    <option value="Pengembangan Diri">
+                        Pengembangan Diri
+                    </option>
+
+                    <option value="Filsafat">Filsafat</option>
+
+                </select>
+
+
+                <label>Harga Buku</label>
+
+                <input
+                    type="number"
+                    id="harga"
+                    min="1"
+                    placeholder="Masukkan harga buku"
+                    required
+                >
+
+
+                <label>Jumlah Stok</label>
+
+                <input
+                    type="number"
+                    id="stok"
+                    min="0"
+                    placeholder="Masukkan jumlah stok"
+                    required
+                >
+
+
+                <button type="submit">
+                    Tambah Buku
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- TABEL KATALOG -->
+        <section class="card">
+
+            <h2>Daftar Katalog Buku</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Gambar</th>
+                            <th>Judul Buku</th>
+                            <th>Penulis</th>
+                            <th>Kategori</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelStok">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        BookStore &copy; 2026
+
+    </footer>
+
+
+    <!-- MEMANGGIL JAVASCRIPT -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

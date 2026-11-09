@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pemesanan - BookStore</title>
+
+    <!-- MEMANGGIL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="cekLogin()">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            BookStore
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <h1>Halaman Pemesanan Buku</h1>
+
+        <p class="subtitle">
+            Silakan masukkan informasi pemesanan buku.
+        </p>
+
+
+        <!-- FORM PEMESANAN -->
+        <section class="card">
+
+            <h2>Informasi Pemesan</h2>
+
+            <form id="formCheckout" onsubmit="prosesPesanan(event)">
+
+                <label>Nama Pemesan</label>
+
+                <input
+                    type="text"
+                    id="namaPemesan"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                >
+
+
+                <label>Alamat Pengiriman</label>
+
+                <textarea
+                    id="alamat"
+                    placeholder="Masukkan alamat lengkap"
+                    required
+                ></textarea>
+
+
+                <label>Nomor Telepon</label>
+
+                <input
+                    type="tel"
+                    id="telepon"
+                    placeholder="Contoh: 081234567890"
+                    required
+                >
+
+
+                <br>
+
+                <h2>Detail Pemesanan</h2>
+
+                <br>
+
+
+                <label>Pilih Buku</label>
+
+                <select id="pilihBuku" required>
+
+                    <option value="">
+                        Pilih Buku
+                    </option>
+
+                </select>
+
+
+                <label>Jumlah Buku</label>
+
+                <input
+                    type="number"
+                    id="jumlah"
+                    min="1"
+                    value="1"
+                    required
+                >
+
+
+                <!-- TOMBOL TAMBAH KE KERANJANG -->
+                <button
+                    type="button"
+                    class="btn-primary"
+                    onclick="tambahKeranjang()"
+                >
+                    Tambah ke Keranjang
+                </button>
+
+
+                <br><br>
+
+                <h2>Keranjang Pemesanan</h2>
+
+
+                <!-- TABEL KERANJANG -->
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Nama Buku</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                                <th>Subtotal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelKeranjang">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <br>
+
+                <!-- TOTAL PEMBAYARAN -->
+                <h3>Total Pembayaran</h3>
+
+                <h2 id="total">Rp 0</h2>
+
+
+                <br>
+
+                <label>Metode Pembayaran</label>
+
+                <select id="pembayaran" required>
+
+                    <option value="">
+                        Pilih Metode Pembayaran
+                    </option>
+
+                    <option value="Transfer Bank">
+                        Transfer Bank
+                    </option>
+
+                    <option value="COD">
+                        Cash On Delivery
+                    </option>
+
+                    <option value="E-Wallet">
+                        E-Wallet
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Buat Pesanan
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- HASIL PEMESANAN -->
+        <section id="hasilPesanan">
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        BookStore &copy; 2026
+
+    </footer>
+
+
+    <!-- MEMANGGIL JAVASCRIPT -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

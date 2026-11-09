@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - BookStore</title>
+
+    <!-- MEMANGGIL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="cekLogin()">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            BookStore
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog</a>
+            <a href="chackout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- GREETING -->
+        <section class="card">
+
+            <h1 id="greeting">
+                Selamat Datang!
+            </h1>
+
+            <p class="subtitle">
+                Sistem Informasi Pemesanan Buku Online
+            </p>
+
+            <p>
+                Selamat datang di BookStore.
+                Kelola stok buku, pemesanan, dan pengiriman
+                melalui satu aplikasi.
+            </p>
+
+        </section>
+
+
+        <!-- MENU UTAMA -->
+        <h2>Menu Utama</h2>
+
+        <br>
+
+        <section class="grid">
+
+            <a href="stok.html" class="menu-card">
+
+                <h3>Informasi Stok/Katalog</h3>
+
+                <p>
+                    Melihat daftar buku dan mengelola stok.
+                </p>
+
+            </a>
+
+
+            <a href="tracking.html" class="menu-card">
+
+                <h3>Tracking Pengiriman</h3>
+
+                <p>
+                    Melihat status pengiriman buku.
+                </p>
+
+            </a>
+
+
+            <a href="#laporan" class="menu-card">
+
+                <h3>Laporan Pemesanan</h3>
+
+                <p>
+                    Melihat seluruh data pemesanan.
+                </p>
+
+            </a>
+
+
+            <a href="#histori" class="menu-card">
+
+                <h3>History Transaksi</h3>
+
+                <p>
+                    Melihat riwayat transaksi pelanggan.
+                </p>
+
+            </a>
+
+
+        </section>
+
+
+        <br>
+
+
+        <!-- LAPORAN PEMESANAN -->
+        <section class="card" id="laporan">
+
+            <h2>Laporan Pemesanan</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nomor DO</th>
+                            <th>Nama Pemesan</th>
+                            <th>Nama Buku</th>
+                            <th>Total Pembayaran</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelLaporan">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORY TRANSAKSI -->
+        <section class="card" id="histori">
+
+            <h2>History Transaksi</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nomor Transaksi</th>
+                            <th>Nama Pemesan</th>
+                            <th>Nama Buku</th>
+                            <th>Total Pembayaran</th>
+                            <th>Metode Pembayaran</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelHistori">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        BookStore &copy; 2026
+
+    </footer>
+
+
+    <!-- MEMANGGIL JAVASCRIPT -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

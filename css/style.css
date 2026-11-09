@@ -1,0 +1,374 @@
+
+/* =================================
+   STYLE DASAR
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #252b42;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    background: #252b42;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo img {
+    width: 35px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: white;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #f5b942;
+}
+
+/* =================================
+   CONTAINER DAN CARD
+================================= */
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.subtitle {
+    color: #777;
+    margin: 10px 0 25px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 12px;
+}
+
+/* =================================
+   DASHBOARD
+================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    color: #252b42;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    border-color: #e5a52d;
+}
+
+.menu-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* =================================
+   FORM DAN INPUT
+================================= */
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #e5a52d;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* =================================
+   TOMBOL
+================================= */
+
+button {
+    background: #e5a52d;
+    color: #252b42;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.btn-primary {
+    background: #252b42;
+    color: white;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-small {
+    padding: 7px 11px;
+    font-size: 12px;
+}
+
+/* =================================
+   TABEL
+================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+}
+
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #252b42;
+    color: white;
+}
+
+tr:hover {
+    background: #f8f8f8;
+}
+
+/* =================================
+   GAMBAR BUKU
+================================= */
+
+.book-image {
+    width: 55px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.book-item {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.book-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* =================================
+   LOGIN
+================================= */
+
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    width: 100%;
+    max-width: 410px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.login-box h1,
+.login-box > p {
+    text-align: center;
+}
+
+.login-box > p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.login-box button {
+    width: 100%;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.login-links a {
+    color: #252b42;
+    font-size: 13px;
+}
+
+/* =================================
+   MODAL
+================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* =================================
+   STATUS DAN PROGRESS
+================================= */
+
+.status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #fff0cb;
+    font-size: 12px;
+}
+
+.progress {
+    height: 14px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #27ae60;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 650px) {
+    .container {
+        width: 94%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}
